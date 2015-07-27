@@ -9,7 +9,7 @@ import org.apache.spark._
 import org.apache.spark.SparkContext._
 
 object Hello {
-    val conf = new SparkConf().setAppName("hello").setMaster("local")
+    val conf = new SparkConf().setAppName("hello").setMaster("yarn-cluster")
     val sc = new SparkContext(conf)
   def Check(): Boolean = {
     val hadoopConf = new org.apache.hadoop.conf.Configuration()

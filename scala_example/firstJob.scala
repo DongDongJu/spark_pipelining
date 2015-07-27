@@ -5,7 +5,7 @@ import org.apache.spark.SparkContext._
 
 object Hello {
   def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("hello").setMaster("local")
+    val conf = new SparkConf().setAppName("hello").setMaster("yarn-cluster")
     val sc = new SparkContext(conf)
     
     val textLinesRDD = sc.textFile("hdfs://192.168.100.125:9000/user/hadoop/3")
